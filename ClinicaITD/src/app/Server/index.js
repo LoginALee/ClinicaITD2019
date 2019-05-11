@@ -1,11 +1,10 @@
-const express = requiere('express')
-//const morgan = requiere('morgan')
+const express = require('express')
 const app = express()
-
+const morgan = require('morgan')
 //Settings
 app.set('port', process.env.PORT || 3000);
 //Middewares
-//app.use(morgan('dev'));
+app.use(morgan('dev'));
 //Routes
 
 //Starting the server
