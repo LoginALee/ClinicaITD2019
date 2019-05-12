@@ -9,7 +9,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(morgan('dev'));
 app.use(express.json());
 //Routes
-app.use('/Api/Clinica',require('./routes/clinica.routes'));
+app.use('/Api/clinica',require('./routes/clinica.routes'));
 //Starting the server
 
 //app.get('/', (req, res) => res.send('Hello World!'))
