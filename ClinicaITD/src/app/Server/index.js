@@ -5,6 +5,7 @@ const morgan = require('morgan')
 app.set('port', process.env.PORT || 3000);
 //Middewares
 app.use(morgan('dev'));
+app.use(express.json());
 //Routes
 
 //Starting the server
