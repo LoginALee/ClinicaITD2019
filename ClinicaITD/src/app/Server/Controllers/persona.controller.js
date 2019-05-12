@@ -6,5 +6,21 @@ personaCtrl.getPersonas =  (req, res) =>{
     });
 };
 
+personaCtrl.createPersona = function() {
+
+}
+
+personaCtrl.getPersonaUnica = function(){
+
+}
+
+personaCtrl.editPersona = function(){
+
+}
+
+personaCtrl.deletePersona = function(){
+    
+}
+
 
 module.exports = personaCtrl;
