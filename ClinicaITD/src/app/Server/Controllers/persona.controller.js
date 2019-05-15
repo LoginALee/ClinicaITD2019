@@ -16,16 +16,28 @@ personaCtrl.createPersona = async (req, res) =>{
     
 };
 
-personaCtrl.getPersonaUnica = function(){
-    
+personaCtrl.getPersonaUnica = async (req, res) =>{
+    const p = await persona.findById(req.params.id);
+    res.json(p);
 };
 
-personaCtrl.editPersona = function(){
-
+personaCtrl.editPersona = async (req,res) =>{
+    const { id } = req.params;
+    const p = {
+        nombre: req.body.nombre,
+        edad: req.body.edad,
+        fechaNacimiento: req.body.fechaNacimiento,
+        nacionalidad: req.body.nacionalidad,
+        domicilio: req.body.domicilio,
+        telefono: req.body.telefono
+    };
+    await persona.findOneAndUpdate(id, {$set: p}, {new: true});
+    res.json({status: 'Persona actualizada'});
 };
 
-personaCtrl.deletePersona = function(){
-
+personaCtrl.deletePersona = async (req, res) => {
+    await persona.findOneAndDelete(req.params.id);
+    res.json({status : 'Persona borrada'});
 };
 
 
