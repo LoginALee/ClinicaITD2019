@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const persoCtrl = require('../Controllers/persona.controller');
+const persona = require('../Controllers/persona.controller');
 
-router.get('/', persoCtrl.getPersonas);
-router.post('/', persoCtrl.createPersona);
-router.get('/:id', persoCtrl.getPersonaUnica);
-router.put('/:id', persoCtrl.editPersona);
-router.delete('/:id', persoCtrl.deletePersona);
+router.get('/', persona.getPersonas);
+router.post('/', persona.createPersona);
+router.get('/:id', persona.getPersonaUnica);
+router.put('/:id', persona.editPersona);
+router.delete('/:id', persona.deletePersona);
 
 
 

@@ -3,14 +3,17 @@ const personaCtrl = {};
 
 personaCtrl.getPersonas = async (req, res) =>{
    const personas = await persona.find();
-   res.json(persona);
+   res.json(personas);
         
 };
 
 personaCtrl.createPersona = async (req, res) =>{
-    const persona = new persona(req.body);
-    console.log(persona);
-    res.json('received');
+    const p = new persona(req.body);
+    await p.save();
+    res.json({
+        'status' : 'Persona guardada'
+    });
+    
 };
 
 personaCtrl.getPersonaUnica = function(){
