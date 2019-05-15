@@ -17,7 +17,7 @@ personaCtrl.createPersona = async (req, res) =>{
 };
 
 personaCtrl.getPersonaUnica = function(){
-
+    
 };
 
 personaCtrl.editPersona = function(){
